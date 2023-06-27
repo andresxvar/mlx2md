@@ -8,8 +8,6 @@ Running this script creates .md versions of this file and folders with images
 
 ### 1.1.1 Headings
 
-Formatted text including **bold**, *italic,* underlined, `monospaced.`
-
 For the formula  $z=x^2 +y^2$, with $z=5$
 
 ```matlab:Code
