@@ -10,9 +10,9 @@ Running this script creates .md versions of this file and folders with images
 
 For the formula  $z=x^2 +y^2$, with $z=5$
 
-z =$$x^2 +y^2$$
+z = $$x^2 +y^2 $$
 
-f =$$x^2 +y^2 =5$$
+f = $$x^2 +y^2 =5$$
 
 ```text:Output
 The equation is x^2+y^2=5
@@ -29,3 +29,15 @@ and in latex format: $x^2+y^2=5$
 |3|0|-5^(1/2)|5^(1/2)|
 |4|1|-2      |2      |
 |5|2|-1      |1      |
+
+```text:Output
+Coverting latex to markdown is complete
+Example.md
+Note: Related images are saved in Example_images
+```
+
+```text:Output
+Coverting latex to markdown is complete
+Example_nocode.md
+Note: Related images are saved in Example_images
+```

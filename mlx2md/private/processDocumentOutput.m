@@ -147,7 +147,7 @@ tmp = erase(symoutParts,"\begin{matlabsymbolicoutput}"+newline);
 tmp = replace(tmp,"$\displaystyle","$$");
 tmp = erase(tmp," "+newline+newline+"\hskip1em");
 partsMarkdown = replace(tmp,"$"+newline+"\end{matlabsymbolicoutput}","$$"+newline);
-partsMarkdown = replace(partsMarkdown,regexpPattern('[ ]*\$\$[ ]*'),"$$");
+partsMarkdown = replace(partsMarkdown,regexpPattern('\$\$[ ]*'),"$$");
 str2md(symoutIdx) = partsMarkdown;
 % NOTE: This part will be processed by processEquations.m
 
