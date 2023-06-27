@@ -26,7 +26,7 @@ switch format
     case 'qiita'
         str2md = regexprep(str2md,"[^`]?\$\$([^$]+)\$\$[^`]?",newline+"```math" + newline + "$1" + newline + "```");
     case 'github'
-        str2md = regexprep(str2md,"[^`]?\$\$([^$]+)\$\$[^`]?","$$" + "$1" + "$$" + newline);
+        str2md = regexprep(str2md,"[^`]?\$\$([^$]+)\$\$[^`]?",newline+"$$" + "$1" + "$$" + newline);
     case 'github_math'
         tt = regexp(str2md,"[^`]?\$\$([^$]+)\$\$[^`]?", 'tokens');
         idx = cellfun(@iscell,tt); 

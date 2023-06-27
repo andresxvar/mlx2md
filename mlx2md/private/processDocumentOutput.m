@@ -145,7 +145,7 @@ symoutIdx = contains(str2md,["\begin{matlabsymbolicoutput}","\end{matlabsymbolic
 symoutParts = str2md(symoutIdx);
 tmp = erase(symoutParts,"\begin{matlabsymbolicoutput}"+newline);
 tmp = replace(tmp,"$\displaystyle","$$");
-tmp = erase(tmp,""+newline+newline+"\hskip1em");
+tmp = erase(tmp," "+newline+newline+"\hskip1em");
 partsMarkdown = replace(tmp,"$"+newline+"\end{matlabsymbolicoutput}","$$");
 str2md(symoutIdx) = partsMarkdown;
 % NOTE: This part will be processed by processEquations.m
