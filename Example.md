@@ -16,15 +16,13 @@ syms x y
 z = x^2 + y^2
 ```
 
-z =
-$$ x^2 +y^2 $$
+z =$$x^2 +y^2$$
 
 ```matlab:Code
 f = z==5
 ```
 
-f =
-$$ x^2 +y^2 =5$$
+f =$$x^2 +y^2 =5$$
 
 ```matlab:Code
 
@@ -71,7 +69,7 @@ tab1=table(x,y)
 
 ```matlab:Code
 %  export to markdown, and also without code
-addpath('mlx2md')
+%addpath('mlx2md')
 export("Example.mlx","Example.tex");
 latex2markdown("Example");
 latex2markdown("Example",outputfilename="Example_nocode",hidecode=true);

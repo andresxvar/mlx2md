@@ -10,11 +10,9 @@ Running this script creates .md versions of this file and folders with images
 
 For the formula  $z=x^2 +y^2$, with $z=5$
 
-z =
-$$ x^2 +y^2 $$
+z =$$x^2 +y^2$$
 
-f =
-$$ x^2 +y^2 =5$$
+f =$$x^2 +y^2 =5$$
 
 ```text:Output
 The equation is x^2+y^2=5
