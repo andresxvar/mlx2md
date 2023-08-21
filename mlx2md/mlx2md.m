@@ -1,3 +1,7 @@
+% MLX2MD
+% for example use mlx2md in the folder where MLX files are
+% or use mlx2md("myfolder/test*.mlx") to find MLX files
+% this function takes care of running the export, latex2markdown and delete commands
 function mlx2md(mlxfilename)
 arguments
     mlxfilename = "*.mlx";
