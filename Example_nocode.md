@@ -29,15 +29,3 @@ and in latex format: $x^2+y^2=5$
 |3|0|-5^(1/2)|5^(1/2)|
 |4|1|-2      |2      |
 |5|2|-1      |1      |
-
-```text:Output
-Coverting latex to markdown is complete
-Example.md
-Note: Related images are saved in Example_images
-```
-
-```text:Output
-Coverting latex to markdown is complete
-Example_nocode.md
-Note: Related images are saved in Example_images
-```

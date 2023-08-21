@@ -1,11 +1,8 @@
 function mdfile = latex2markdown(filename,options)
 % Modified from Copyright 2020-2022 The MathWorks, Inc.
-
-% What is arguments?
-% see: https://jp.mathworks.com/help/matlab/matlab_prog/argument-validation-functions.html
 arguments
     filename (1,1) string
-    options.outputfilename char = filename
+    options.outputfilename (1,1) string = missing
     options.format char {mustBeMember(options.format,{'qiita','github','github_math'})} = 'github'
     options.png2jpeg logical = false
     options.tableMaxWidth (1,1) double = 20
@@ -23,7 +20,12 @@ end
 if ext == "" % if without extention, add .tex
     latexfile = fullfile(filepath, name + ".tex");
 else %
-    latexfile = filename;
+    latexfile = filename;    
+end
+
+% output file in the same path but with markdown extension
+if ismissing(options.outputfilename)
+    options.outputfilename = fullfile(filepath,name) + ".md";
 end
 
 % check if latexfile exists
@@ -180,11 +182,12 @@ if options.ToC
 end
 
 %% File outputファイル出力
-mdfile = options.outputfilename + ".md";
-fileID = fopen(mdfile,'w');
+fileID = fopen(options.outputfilename,'w');
 fprintf(fileID,'%s',strmarkdown);
 fclose(fileID);
 
 disp("Coverting latex to markdown is complete");
-disp(mdfile);
+disp(options.outputfilename);
 disp("Note: Related images are saved in " + name + "_images");
+
+mdfile = options.outputfilename;
